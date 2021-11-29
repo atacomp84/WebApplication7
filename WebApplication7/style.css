@@ -1,0 +1,77 @@
+.about{}
+.ayri{}
+/*pseudo elements*/
+p::first-line{           /*p etiketlerinin ilk satýrý*/
+    font-weight:bold;
+    color:brown;
+    word-spacing:2px;
+    letter-spacing:1px;
+}
+p.about::first-line{   /*p etiketlerinden clasý about olablarýn ilk satýrý*/
+    color:green;
+}
+h1::first-letter{       /*p etiketlerinin ilk harfi*/
+    color:blue;
+    font-size:70px;
+}
+h1.ayri::first-letter{      /*p etiketlerinden clasý ayri olablarýn ilk harfi*/
+    font-size:20px;
+}
+p::after{
+    content:"p den sonrasi";
+    display:block;
+   
+    padding:10px;
+}
+p::before {
+    content: "p dn oncesi";
+    display: block;
+    padding: 10px;
+}
+
+
+/*pseudo class*/
+
+ul li{
+    list-style:none;
+}
+ul li:first-child{          /*ul içndeki li lerden ilk eleman*/
+    background-color:red;
+}
+ul li:last-child{            /*ul içndeki li lerden son eleman*/
+    background-color:yellow;
+}
+ul li:nth-of-type(even){       /*ul içndeki li lerden çift olan eleman*/
+   background-color:lightgray;
+}
+ul li:nth-of-type(odd){            /*ul içndeki li lerden tek olan eleman*/
+    background-color:gray;
+}
+
+
+
+a {
+    background-color: lightgray;
+    margin-bottom: 5px;
+    width: 80px;
+    height: 20px;
+    border: 1px solid gray;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    box-shadow: 1px 5px 5px 1px rgba(0,0,0,0.3);
+}
+    a:hover {
+        background-color: black;
+        color: gray;
+        transition-duration: .3s;
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.3);
+    }
+
+
+
